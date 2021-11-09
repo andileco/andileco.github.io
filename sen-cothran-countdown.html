@@ -15,7 +15,7 @@
             border: 1px solid #999;
             display: block;
             width: 100%;
-            background-image: url(https://andileco.github.io//flags/4x3/za.svg);
+            background-image: url(https://andileco.github.io/flags/4x3/za.svg);
             background-size: cover;
         }
         #flag-wrapper {
@@ -40,10 +40,6 @@
 <div class="container">
     <div class="jumbotron">
         <h1><span class="flag-icon flag-icon-za flag-icon-squared"></span> Sen-Cothran Adoption Countdown</h1>
-        <!--<div class="progress">-->
-            <!--<div class="progress-bar" id="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"-->
-                 <!--aria-valuemax="100"></div>-->
-        <!--</div>-->
         <div id="progressTextDescending"></div>
         <div id="flag-border">
             <div id="flag-wrapper"></div>
@@ -54,7 +50,6 @@
 </body>
 <script type="text/javascript">
 
-  // const progressBar = document.getElementById('progress');
   const progressTextDescending = document.getElementById('progressTextDescending');
   const flagWrapper = document.getElementById('flag-wrapper');
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
@@ -68,8 +63,6 @@
 
   function updateCountdown() {
     progressTextDescending.innerHTML = '<p class="lead">' + daysLeft + ' days left (' + Math.round(percentComplete) + '% complete)</p>';
-    // progressBar.setAttribute('aria-valuenow', (percentComplete));
-    // progressBar.style.width = percentComplete + '%';
     flagWrapper.style.width = 'calc(100% - ' + percentComplete + '%)';
     flagWrapper.style.marginLeft = percentComplete + '%';
   }
